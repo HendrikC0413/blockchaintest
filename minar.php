@@ -46,15 +46,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     $_SESSION['blockchain'] = $blockchain; // Actualiza la sesión con la cadena de bloques modificada
     $_SESSION['Coin'] = $_SESSION['Coin'] + $money;
     $_SESSION['Money'] = $money;
-    echo '<script>alert("Se ha ganado: ' . $_SESSION['Money'] . ' QPAZACoins");</script>';
+    echo '<script>alert("Se ha ganado: $ ' . $_SESSION['Money'] . ' QPAZACoins");</script>';
 }
 
 function dineroGanado(){
     global $difficulty,$money;
     $val = random_int(0,3);
 
-    echo "difficulty: $difficulty<br>";
-    echo "val: $val<br>";
+    //echo "difficulty: $difficulty<br>";
+    //echo "val: $val<br>";
 
     if($difficulty === 3){
         if ($val === 0  || $val ===2){
@@ -90,7 +90,7 @@ function dineroGanado(){
             $money = $money + 0.0025;
         }
     }
-    echo "money: $money<br>";
+    //echo "money: $money<br>";
 }
 
 ?>
@@ -107,28 +107,35 @@ function dineroGanado(){
 
 <div class="container mt-5">
     <h2>Bienvenido, <?php echo $_SESSION['username']; ?>!</h2>
-    <ul class="nav">
+    <ul class="nav bg-dark">
         <li class="nav-item">
-            <a class="nav-link" href="menu.php">Inicio</a>
+            <a class="nav-link text-white" href="menu.php">Inicio</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="minar.php">Minar</a>
+            <a class="nav-link text-white" href="minar.php">Minar</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="verRegistro.php">Detalle Transacciones</a>
+            <a class="nav-link text-white" href="verRegistro.php">Detalle Transacciones</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="logout.php">Cerrar Sesión</a>
+            <a class="nav-link text-white" href="logout.php">Cerrar Sesión</a>
         </li>
     </ul>
 </div>
+
 <div class="container">
-    <h1>Index.php con bootstrap</h1>
-    <!-- Crea un formulario para llamar a la función mostrar_variable() -->
-    <form method="post">
-        <input type="hidden" name="action" value="mostrar_variable">
-        <button type="submit" class="btn btn-primary">Mostrar variable</button>
-    </form>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-6 text-center">
+            <div class="my-5">
+                <h1>Es hora de trabajar!</h1>
+                <!-- Crea un formulario para llamar a la función mostrar_variable() -->
+                <form method="post">
+                    <input type="hidden" name="action" value="mostrar_variable">
+                    <button type="submit" class="btn btn-warning">Minar!</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Incluye jQuery y bootstrap desde un CDN -->

@@ -34,31 +34,25 @@ $blockchain = $_SESSION['blockchain'];
 
 <div class="container mt-5">
     <h2>Bienvenido, <?php echo $_SESSION['username']; ?>!</h2>
-    <ul class="nav">
+    <ul class="nav bg-dark">
         <li class="nav-item">
-            <a class="nav-link" href="menu.php">Inicio</a>
+            <a class="nav-link text-white" href="menu.php">Inicio</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="minar.php">Minar</a>
+            <a class="nav-link text-white" href="minar.php">Minar</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="verRegistro.php">Detalle Transacciones</a>
+            <a class="nav-link text-white" href="verRegistro.php">Detalle Transacciones</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="logout.php">Cerrar Sesión</a>
+            <a class="nav-link text-white" href="logout.php">Cerrar Sesión</a>
         </li>
     </ul>
 </div>
 
 <div class="container mt-5">
-    <h1 class="text-center">Copiar Mensaje al Portapapeles desde un Input</h1>
+    <h1 class="text-center">Tus transacciones se pueden observar aquí.</h1>
 
-    <?php
-    // Mensaje que deseas copiar al portapapeles
-    $mensaje = "Este es el mensaje que quiero copiar.";
-    ?>
-
-    <!-- Utiliza las clases de Bootstrap para mejorar el diseño -->
     <div class="input-group mb-3">
         <table class="table table-striped">
             <thead>

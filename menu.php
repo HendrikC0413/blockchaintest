@@ -28,18 +28,18 @@
 <body>
     <div class="container mt-5">
         <h2>Bienvenido, <?php echo $_SESSION['username']; ?>!</h2>
-        <ul class="nav">
+        <ul class="nav bg-dark">
             <li class="nav-item">
-                <a class="nav-link" href="menu.php">Inicio</a>
+                <a class="nav-link text-white" href="menu.php">Inicio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="minar.php">Minar</a>
+                <a class="nav-link text-white" href="minar.php">Minar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="verRegistro.php">Detalle Transacciones</a>
+                <a class="nav-link text-white" href="verRegistro.php">Detalle Transacciones</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="logout.php">Cerrar Sesión</a>
+                <a class="nav-link text-white" href="logout.php">Cerrar Sesión</a>
             </li>
         </ul>
     </div>
@@ -48,7 +48,7 @@
             <div class="col-md-6 text-center">
                 <div class="my-5">
                     <h3>Tus QPAZACoins son de:</h3>
-                    <p><?php echo $_SESSION['Coin']; ?></p>
+                    <p>$ <?php echo $_SESSION['Coin']; ?></p>
                 </div>
             </div>
         </div>

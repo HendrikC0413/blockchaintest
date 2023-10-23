@@ -29,7 +29,7 @@ class Block {
             $this->nonce++;
             $this->hash = $this->calculateHash();
         }
-        echo "Block mined: " . $this->hash . "\n";
+        //echo "Block mined: " . $this->hash . "\n";
         $this->difficult = $difficulty;
     }
 }
